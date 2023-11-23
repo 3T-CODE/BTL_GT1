@@ -24,7 +24,10 @@ dB_dt_25p  =        double(subs( dB_dt , t , t_25p ));
 fprintf('Tai thoi diem t = %.0f phut thi toc do tang truong cua quan the V.natriegens uoc tinh la %.4f \n', t_25p , dB_dt_25p  );
 
 %Cau d) Quan the dat toc do tang truong 2*10^-3 (don vi mat do) sau khoang thoi gian bao lau
-
+dB_dt = input('Nhap toc do tang truong can tim V_tang_truong  = ');
+eqn = diff(Bt,t) == dB_dt ;
+t = double(solve(eqn, t));
+fprintf('Quan the dat toc do tang truong 2*10^-3 (don vi mat do / s) trong khoang thoi gian  t = %.4f' , t);
 
 
 
