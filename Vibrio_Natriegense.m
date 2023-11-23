@@ -6,7 +6,7 @@
 close all
 clear all
 %Khai bao
-syms B_t B_0 t ;
+syms B_t t ;
 %Nhap du lieu
 
 Bt = input('Nhap phuong trinh tong quat:  B(t) = ');
