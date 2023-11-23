@@ -16,14 +16,14 @@ syms Bt  t ;
 Bt = input('Nhap phuong trinh tong quat:  B(t) = ');
 
 % Cau b)  Tinh mat do quan the vi khuan V.natriegens sau 2 gio
-t_2h           =          input('Nhap thoi diem muon tinh mat do t(gio) =  ');
-B_2h          =         double(subs(Bt , t , t_2h*60));
+t_2h = input('Nhap thoi diem muon tinh mat do t(gio) =  ');
+B_2h = double(subs(Bt , t , t_2h*60));
 fprintf('Sau %.0f gio thi mat do quan the vi khuan V.natriegens la %.4f \n' , t_2h  , B_2h);
 
 %Cau c) Uoc luong toc do tang truong cua quan the V.natriegens tai t = 25
-t_25p          =         input('Nhap thoi diem muon tinh toc do tang truong t(phut) = ');
-dB_dt          =        diff( Bt , t );
-dB_dt_25p  =        double(subs( dB_dt , t , t_25p ));
+t_25p = input('Nhap thoi diem muon tinh toc do tang truong t(phut) = ');
+dB_dt = diff( Bt , t );
+dB_dt_25p  = double(subs( dB_dt , t , t_25p ));
 fprintf('Tai thoi diem t = %.0f phut thi toc do tang truong cua quan the V.natriegens uoc tinh la %.4f \n', t_25p , dB_dt_25p  );
 
 %Cau d) Quan the dat toc do tang truong 2*10^-3 (don vi mat do / s) sau khoang thoi gian bao lau
