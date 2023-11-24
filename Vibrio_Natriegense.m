@@ -3,7 +3,7 @@
 % cau b ) Tinh mat do quan the vi khuan V.natriegens sau 2 gio
 % cau c ) Uoc luong toc do tang truong cua quan the V.natriegens tai t = 25
 % cau d ) Quan the dat toc do tang truong 2*10^-3 (don vi mat do / s) sau khoang thoi gian bao lau
-
+% cau e ) Ve do thi mat do tang truong trong khoang thoi gian tu 0 den 80 phut
 
 %Reset
 close all
@@ -32,7 +32,7 @@ eqn = diff(Bt,t) == dB_dt ;
 t = double(solve(eqn, t));
 fprintf('Quan the dat toc do tang truong 2*10^-3 (don vi mat do / s) trong khoang thoi gian  t = %.4f \n' , t);
 
-%Cau e) Ve do thi trong khoang thoi gian tu 0 den 80 phut
+%Cau e) Ve do thi mat do tang truong trong khoang thoi gian tu 0 den 80 phut
 t1=input('Nhap thoi diem bat dau t1= ');
 t2=input('Nhap thoi diem ket thuc t2= ');
 figure;
